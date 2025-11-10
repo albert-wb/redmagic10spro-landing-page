@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RedMagic 10S Pro | Gaming Smartphone Elite</title>
+    <link rel="shortcut icon" href="https://br.redmagic.gg/cdn/shop/files/favicon_32x32.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-red: #e60012;
+            --dark-red: #b30000;
+            --black: #0a0a0a;
+            --dark-gray: #1a1a1a;
+            --gray: #2a2a2a;
+            --light-gray: #cccccc;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: var(--black);
+            color: var(--white);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, var(--black) 0%, var(--dark-gray) 100%);
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(230, 0, 18, 0.1) 0%, transparent 70%);
+            animation: pulse 8s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.2); opacity: 0.8; }
+        }
+
+        .hero-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-text h1 {
+            font-size: clamp(3rem, 8vw, 7rem);
+            font-weight: 900;
+            line-height: 0.9;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--white) 0%, var(--primary-red) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-text .subtitle {
+            font-size: clamp(1.2rem, 3vw, 2rem);
+            color: var(--light-gray);
+            margin-bottom: 2rem;
+            font-weight: 300;
+        }
+
+        .hero-text .tagline {
+            font-size: clamp(0.9rem, 2vw, 1.1rem);
+            color: var(--primary-red);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-weight: 600;
+            margin-bottom: 3rem;
+        }
+
+        .cta-group {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: var(--primary-red);
+            color: var(--white);
+            padding: 1.2rem 3rem;
+            border: none;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn-primary:hover {
+            background: var(--dark-red);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(230, 0, 18, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--white);
+            padding: 1.2rem 3rem;
+            border: 2px solid var(--white);
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn-secondary:hover {
+            background: var(--white);
+            color: var(--black);
+        }
+
+        .hero-image {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            height: auto;
+            filter: drop-shadow(0 0 80px rgba(230, 0, 18, 0.4));
+        }
+
+        /* Stats Bar */
+        .stats-bar {
+            background: var(--dark-gray);
+            padding: 3rem 2rem;
+            border-top: 1px solid rgba(230, 0, 18, 0.3);
+            border-bottom: 1px solid rgba(230, 0, 18, 0.3);
+        }
+
+        .stats-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+            text-align: center;
+        }
+
+        .stat-item h3 {
+            font-size: 2.5rem;
+            color: var(--primary-red);
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-item p {
+            font-size: 1rem;
+            color: var(--light-gray);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 6rem 2rem;
+            background: var(--black);
+        }
+
+        .features-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            text-align: center;
+            margin-bottom: 4rem;
+            font-weight: 700;
+        }
+
+        .section-title span {
+            color: var(--primary-red);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background: var(--dark-gray);
+            padding: 2.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: var(--primary-red);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .feature-card:hover {
+            border-color: var(--primary-red);
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            color: var(--primary-red);
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .feature-card p {
+            color: var(--light-gray);
+            line-height: 1.8;
+        }
+
+        /* Gallery Section */
+        .gallery {
+            padding: 6rem 2rem;
+            background: var(--dark-gray);
+        }
+
+        .gallery-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-top: 3rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            aspect-ratio: 16/10;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-item:first-child {
+            grid-column: span 2;
+        }
+
+        /* Specs Section */
+        .specs-section {
+            padding: 6rem 2rem;
+            background: var(--black);
+        }
+
+        .specs-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .specs-image img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .specs-list {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .spec-item {
+            border-left: 3px solid var(--primary-red);
+            padding-left: 2rem;
+        }
+
+        .spec-item h4 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary-red);
+        }
+
+        .spec-item p {
+            font-size: 1.1rem;
+            color: var(--light-gray);
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 8rem 2rem;
+            background: linear-gradient(135deg, var(--dark-red) 0%, var(--primary-red) 100%);
+            text-align: center;
+        }
+
+        .cta-content h2 {
+            font-size: clamp(2rem, 5vw, 4rem);
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        .cta-content p {
+            font-size: 1.3rem;
+            margin-bottom: 3rem;
+            opacity: 0.9;
+        }
+
+        .price-tag {
+            font-size: 3rem;
+            font-weight: 900;
+            margin-bottom: 2rem;
+            display: inline-block;
+            padding: 1rem 3rem;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--black);
+            padding: 3rem 2rem;
+            border-top: 1px solid rgba(230, 0, 18, 0.3);
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+        }
+
+        .footer-section h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-red);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links a {
+            color: var(--light-gray);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-red);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-links a {
+            width: 45px;
+            height: 45px;
+            background: var(--dark-gray);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            color: var(--white);
+            font-size: 1.3rem;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: var(--primary-red);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 3rem;
+            margin-top: 3rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--light-gray);
+        }
+
+        /* Floating Button */
+        .floating-buy {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 1000;
+        }
+
+        .floating-buy .btn-primary {
+            box-shadow: 0 5px 30px rgba(230, 0, 18, 0.5);
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .cta-group {
+                justify-content: center;
+            }
+
+            .specs-container {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-item:first-child {
+                grid-column: span 1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-text h1 {
+                font-size: 3rem;
+            }
+
+            .stats-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .social-links {
+                justify-content: center;
+            }
+
+            .floating-buy {
+                bottom: 1rem;
+                right: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <p class="tagline">Gaming Smartphone Elite</p>
+                <h1>RedMagic<br>10S Pro</h1>
+                <p class="subtitle">Performance Extrema. Resfriamento Insuperável. Design Revolucionário.</p>
+                <div class="cta-group">
+                    <a href="https://s.shopee.com.br/8zwxu0dS0c" target="_blank" class="btn-primary">
+                        <i class="ri-shopping-cart-2-line"></i>
+                        Comprar Agora
+                    </a>
+                    <a href="#specs" class="btn-secondary">
+                        <i class="ri-arrow-down-line"></i>
+                        Saiba Mais
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://br.redmagic.gg/cdn/shop/files/left-_silver_2.png?v=1733295424&width=800" alt="RedMagic 10S Pro">
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Bar -->
+    <section class="stats-bar">
+        <div class="stats-container">
+            <div class="stat-item">
+                <h3>7050mAh</h3>
+                <p>Bateria Gigante</p>
+            </div>
+            <div class="stat-item">
+                <h3>144Hz</h3>
+                <p>Taxa de Atualização</p>
+            </div>
+            <div class="stat-item">
+                <h3>24GB</h3>
+                <p>RAM Máxima</p>
+            </div>
+            <div class="stat-item">
+                <h3>80W</h3>
+                <p>Carga Rápida</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="features-container">
+            <h2 class="section-title">Tecnologia de <span>Ponta</span></h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="ri-cpu-line"></i>
+                    </div>
+                    <h3>Snapdragon 8 Elite</h3>
+                    <p>Processador Leading Version mais poderoso do mercado com RedCore R3 Pro para performance inigualável em jogos e multitarefas.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="ri-temp-cold-line"></i>
+                    </div>
+                    <h3>Sistema ICE-X</h3>
+                    <p>Resfriamento avançado com metal líquido 2.0, câmara de vapor massiva e ventilador de 23.000 RPM para manter o desempenho máximo.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="ri-smartphone-line"></i>
+                    </div>
+                    <h3>Display Full Screen</h3>
+                    <p>Tela AMOLED de 6.85" sem interrupções, 144Hz, resolução 1.5K e bordas ultrafinas de apenas 1.25mm.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="ri-gamepad-line"></i>
+                    </div>
+                    <h3>Gatilhos 520Hz</h3>
+                    <p>Gatilhos capacitivos RGB com resposta ultra-rápida de 520Hz para precisão profissional em FPS e MOBAs.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="ri-battery-charge-line"></i>
+                    </div>
+                    <h3>Bateria Duradoura</h3>
+                    <p>7050mAh de capacidade com carga rápida de 80W. Jogue por horas sem parar e recarregue rapidamente.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="ri-database-2-line"></i>
+                    </div>
+                    <h3>Armazenamento Ultra</h3>
+                    <p>LPDDR5T RAM até 24GB e UFS 4.1 Pro até 1TB. Velocidade extrema para carregar apps e jogos instantaneamente.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery">
+        <div class="gallery-container">
+            <h2 class="section-title">Design <span>Revolucionário</span></h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://br.redmagic.gg/cdn/shop/files/cover_pc.jpg?v=1733742526&width=1920" alt="RedMagic 10S Pro Cover">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://br.redmagic.gg/cdn/shop/files/left-_silver_2.png?v=1733295424&width=800" alt="RedMagic Silver">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://br.redmagic.gg/cdn/shop/files/left_-_trans_black.png?v=1733295424&width=800" alt="RedMagic Black">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Specs Section -->
+    <section class="specs-section" id="specs">
+        <div class="specs-container">
+            <div class="specs-image">
+                <img src="https://br.redmagic.gg/cdn/shop/files/mobile_kv_d29a41b9-0707-41fa-b2d8-98f09ffe7d54.jpg?v=1732962956&width=800" alt="RedMagic Specs">
+            </div>
+            <div class="specs-list">
+                <div class="spec-item">
+                    <h4>Processador Elite</h4>
+                    <p>Qualcomm Snapdragon 8 Elite Leading Version com clock de até 4.47GHz e GPU Adreno 830 de 1200MHz</p>
+                </div>
+                <div class="spec-item">
+                    <h4>Display Premium</h4>
+                    <p>6.85" AMOLED, 2688×1216 pixels, 144Hz, 2000 nits de brilho, câmera sob display</p>
+                </div>
+                <div class="spec-item">
+                    <h4>Câmeras Potentes</h4>
+                    <p>Sistema duplo 50MP com OIS, ultra-wide 50MP e frontal 16MP sob o display</p>
+                </div>
+                <div class="spec-item">
+                    <h4>Conectividade 5G</h4>
+                    <p>5G completo, WiFi 7, Bluetooth 5.4, NFC e sistema de antenas 360°</p>
+                </div>
+                <div class="spec-item">
+                    <h4>Sistema Operacional</h4>
+                    <p>RedMagic OS 10.5 baseado em Android 15 com recursos IA Google Gemini</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2>Domine Seus Jogos</h2>
+            <p>Adquira o smartphone gamer mais poderoso do mercado</p>
+            <div class="price-tag">Confira na Shopee</div>
+            <a href="https://s.shopee.com.br/8zwxu0dS0c" target="_blank" class="btn-primary" style="background: var(--black); font-size: 1.3rem; padding: 1.5rem 4rem;">
+                <i class="ri-shopping-bag-3-line"></i>
+                Comprar RedMagic 10S Pro
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>RedMagic</h3>
+                <p style="color: var(--light-gray); line-height: 1.8;">
+                    Líder em smartphones gaming com tecnologia de ponta e inovação constante para gamers profissionais.
+                </p>
+            </div>
+            <div class="footer-section">
+                <h3>Links Rápidos</h3>
+                <ul class="footer-links">
+                    <li><a href="#features">Recursos</a></li>
+                    <li><a href="#specs">Especificações</a></li>
+                    <li><a href="https://s.shopee.com.br/8zwxu0dS0c" target="_blank">Comprar</a></li>
+                    <li><a href="#">Suporte</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Produtos</h3>
+                <ul class="footer-links">
+                    <li><a href="#">RedMagic 10S Pro</a></li>
+                    <li><a href="#">Gaming Tablets</a></li>
+                    <li><a href="#">Acessórios</a></li>
+                    <li><a href="#">Coolers</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Redes Sociais</h3>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/redmagicbrasil/" target="_blank">
+                        <i class="ri-instagram-fill"></i>
+                    </a>
+                    <a href="https://www.facebook.com/redmagicgaming" target="_blank">
+                        <i class="ri-facebook-fill"></i>
+                    </a>
+                    <a href="https://twitter.com/redmagicgaming" target="_blank">
+                        <i class="ri-twitter-x-fill"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@redmagicgaming" target="_blank">
+                        <i class="ri-youtube-fill"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 RedMagic 10S Pro Landing Page. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Floating Buy Button -->
+    <div class="floating-buy">
+        <a href="https://s.shopee.com.br/8zwxu0dS0c" target="_blank" class="btn-primary">
+            <i class="ri-shopping-cart-2-fill"></i>
+            Comprar
+        </a>
+    </div>
+
+    <script>
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Hide/show floating button based on scroll
+        let lastScroll = 0;
+        const floatingBtn = document.querySelector('.floating-buy');
+        
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll > 500) {
+                floatingBtn.style.display = 'block';
+            } else {
+                floatingBtn.style.display = 'none';
+            }
+            
+            lastScroll = currentScroll;
+        });
+    </script>
+</body>
+</html>
