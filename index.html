@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RedMagic 10S Pro | Gaming Smartphone Elite</title>
-    <link rel="shortcut icon" href="https://br.redmagic.gg/cdn/shop/files/favicon_32x32.png" type="image/x-icon">
+    <link rel="shortcut icon" href="https://silven.site/wp-content/uploads/2025/11/rdmg_logo.webp" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
     
     <style>
@@ -100,6 +100,8 @@
             display: flex;
             gap: 1.5rem;
             flex-wrap: wrap;
+            flex-direction: column;
+            align-items: flex-start;
         }
 
         .btn-primary {
@@ -347,6 +349,97 @@
             color: var(--light-gray);
         }
 
+        /* Review Section - Prós e Contras */
+        .review-section {
+            padding: 6rem 2rem;
+            background: var(--dark-gray);
+        }
+
+        .review-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .review-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .review-column {
+            background: var(--black);
+            padding: 2.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+        }
+
+        .review-column.pros {
+            border-top: 4px solid #00ff00;
+        }
+
+        .review-column.cons {
+            border-top: 4px solid #ff6b6b;
+        }
+
+        .review-column h3 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .review-column.pros h3 {
+            color: #00ff00;
+        }
+
+        .review-column.cons h3 {
+            color: #ff6b6b;
+        }
+
+        .review-list {
+            list-style: none;
+        }
+
+        .review-list li {
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .review-list li:last-child {
+            border-bottom: none;
+        }
+
+        .review-list li i {
+            font-size: 1.5rem;
+            margin-top: 0.2rem;
+            flex-shrink: 0;
+        }
+
+        .review-column.pros li i {
+            color: #00ff00;
+        }
+
+        .review-column.cons li i {
+            color: #ff6b6b;
+        }
+
+        .review-list li strong {
+            display: block;
+            font-size: 1.2rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .review-list li span {
+            color: var(--light-gray);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
         /* CTA Section */
         .cta-section {
             padding: 8rem 2rem;
@@ -378,90 +471,103 @@
 
         /* Footer */
         footer {
-            background: var(--black);
-            padding: 3rem 2rem;
-            border-top: 1px solid rgba(230, 0, 18, 0.3);
+            background: #333333;
+            padding: 50px 20px;
+            color: #EAEAEA;
         }
 
         .footer-content {
-            max-width: 1400px;
+            max-width: 1140px;
             margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 3rem;
-        }
-
-        .footer-section h3 {
-            font-size: 1.2rem;
-            margin-bottom: 1.5rem;
-            color: var(--primary-red);
         }
 
         .footer-links {
-            list-style: none;
-        }
-
-        .footer-links li {
-            margin-bottom: 0.8rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .footer-links a {
-            color: var(--light-gray);
+            font-family: 'Roboto', sans-serif;
+            font-size: 15px;
+            color: #EAEAEA;
             text-decoration: none;
             transition: color 0.3s ease;
+            position: relative;
+            font-weight: 500;
+        }
+
+        .footer-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-red);
+            transition: width 0.3s ease;
         }
 
         .footer-links a:hover {
             color: var(--primary-red);
         }
 
-        .social-links {
-            display: flex;
-            gap: 1rem;
+        .footer-links a:hover::after {
+            width: 100%;
         }
 
-        .social-links a {
-            width: 45px;
-            height: 45px;
-            background: var(--dark-gray);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            color: var(--white);
-            font-size: 1.3rem;
-            transition: all 0.3s ease;
+        .footer-disclosure {
+            background: rgba(0, 0, 0, 0.2);
+            padding: 25px;
+            border-radius: 8px;
+            margin-bottom: 30px;
         }
 
-        .social-links a:hover {
-            background: var(--primary-red);
-            transform: translateY(-3px);
+        .footer-disclosure h4 {
+            color: var(--primary-red);
+            font-size: 16px;
+            margin-bottom: 15px;
+            font-weight: 600;
         }
 
-        .copyright {
+        .footer-disclosure p {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 14px;
+            line-height: 1.6;
+            color: #9C9C9C;
+            margin-bottom: 10px;
+        }
+
+        .footer-company {
             text-align: center;
-            padding-top: 3rem;
-            margin-top: 3rem;
+            padding-top: 30px;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
-            color: var(--light-gray);
         }
 
-        /* Floating Button */
-        .floating-buy {
-            position: fixed;
-            bottom: 2rem;
-            right: 2rem;
-            z-index: 1000;
+        .footer-company h4 {
+            color: var(--primary-red);
+            font-size: 16px;
+            margin-bottom: 15px;
+            font-weight: 600;
         }
 
-        .floating-buy .btn-primary {
-            box-shadow: 0 5px 30px rgba(230, 0, 18, 0.5);
-            animation: float 3s ease-in-out infinite;
+        .footer-company p {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 13px;
+            color: #9C9C9C;
+            line-height: 1.8;
+            margin-bottom: 5px;
         }
 
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
+        .footer-company .cnpj {
+            font-weight: 600;
+            color: #EAEAEA;
+            margin-top: 15px;
         }
 
         /* Responsive */
@@ -473,6 +579,7 @@
 
             .cta-group {
                 justify-content: center;
+                align-items: center;
             }
 
             .specs-container {
@@ -485,6 +592,10 @@
 
             .gallery-item:first-child {
                 grid-column: span 1;
+            }
+
+            .review-grid {
+                grid-template-columns: 1fr;
             }
         }
 
@@ -502,18 +613,13 @@
                 grid-template-columns: 1fr;
             }
 
-            .footer-content {
-                grid-template-columns: 1fr;
-                text-align: center;
+            .footer-links {
+                flex-direction: column;
+                gap: 20px;
             }
 
-            .social-links {
-                justify-content: center;
-            }
-
-            .floating-buy {
-                bottom: 1rem;
-                right: 1rem;
+            .footer-disclosure {
+                padding: 20px;
             }
         }
     </style>
@@ -528,9 +634,10 @@
                 <p class="subtitle">Performance Extrema. Resfriamento Insuperável. Design Revolucionário.</p>
                 <div class="cta-group">
                     <a href="https://s.shopee.com.br/8zwxu0dS0c" target="_blank" class="btn-primary">
-                        <i class="ri-shopping-cart-2-line"></i>
-                        Comprar Agora
+                        <i class="ri-price-tag-3-line"></i>
+                        Ver Preço na Shopee
                     </a>
+                    <p style="font-size: 12px; color: var(--light-gray); opacity: 0.8; margin-top: 10px;">*Como afiliado Shopee, posso receber uma comissão por compras qualificadas.*</p>
                     <a href="#specs" class="btn-secondary">
                         <i class="ri-arrow-down-line"></i>
                         Saiba Mais
@@ -538,7 +645,7 @@
                 </div>
             </div>
             <div class="hero-image">
-                <img src="https://br.redmagic.gg/cdn/shop/files/left-_silver_2.png?v=1733295424&width=800" alt="RedMagic 10S Pro">
+                <img src="https://silven.site/wp-content/uploads/2025/11/rdmgc_prata.webp" alt="RedMagic 10S Pro">
             </div>
         </div>
     </section>
@@ -627,13 +734,13 @@
             <h2 class="section-title">Design <span>Revolucionário</span></h2>
             <div class="gallery-grid">
                 <div class="gallery-item">
-                    <img src="https://br.redmagic.gg/cdn/shop/files/cover_pc.jpg?v=1733742526&width=1920" alt="RedMagic 10S Pro Cover">
+                    <img src="https://silven.site/wp-content/uploads/2025/11/rdmgc_prata_1.webp" alt="RedMagic 10S Pro Cover">
                 </div>
                 <div class="gallery-item">
-                    <img src="https://br.redmagic.gg/cdn/shop/files/left-_silver_2.png?v=1733295424&width=800" alt="RedMagic Silver">
+                    <img src="https://silven.site/wp-content/uploads/2025/11/rdmgc_prata.webp" alt="RedMagic Silver">
                 </div>
                 <div class="gallery-item">
-                    <img src="https://br.redmagic.gg/cdn/shop/files/left_-_trans_black.png?v=1733295424&width=800" alt="RedMagic Black">
+                    <img src="https://silven.site/wp-content/uploads/2025/11/rdmgc_black.webp" alt="RedMagic Black">
                 </div>
             </div>
         </div>
@@ -643,7 +750,7 @@
     <section class="specs-section" id="specs">
         <div class="specs-container">
             <div class="specs-image">
-                <img src="https://br.redmagic.gg/cdn/shop/files/mobile_kv_d29a41b9-0707-41fa-b2d8-98f09ffe7d54.jpg?v=1732962956&width=800" alt="RedMagic Specs">
+                <img src="https://silven.site/wp-content/uploads/2025/11/rdmgc_prata_2.webp" alt="RedMagic Specs">
             </div>
             <div class="specs-list">
                 <div class="spec-item">
@@ -670,76 +777,159 @@
         </div>
     </section>
 
+    <!-- Review Section - Prós e Contras -->
+    <section class="review-section" id="review">
+        <div class="review-container">
+            <h2 class="section-title">Nossa Análise: <span>Prós e Contras</span></h2>
+            <div class="review-grid">
+                <!-- Prós -->
+                <div class="review-column pros">
+                    <h3>
+                        <i class="ri-thumb-up-fill"></i>
+                        Pontos Positivos
+                    </h3>
+                    <ul class="review-list">
+                        <li>
+                            <i class="ri-checkbox-circle-fill"></i>
+                            <div>
+                                <strong>Bateria Gigante de 7050mAh</strong>
+                                <span>Autonomia excepcional que permite jogos prolongados sem interrupção, ideal para maratonas de gaming.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="ri-checkbox-circle-fill"></i>
+                            <div>
+                                <strong>Desempenho Bruto Incomparável</strong>
+                                <span>Snapdragon 8 Elite Leading Version oferece a melhor performance disponível em smartphones atualmente.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="ri-checkbox-circle-fill"></i>
+                            <div>
+                                <strong>Sistema de Resfriamento ICE-X</strong>
+                                <span>Mantém o aparelho frio mesmo em sessões intensas, garantindo desempenho constante sem throttling.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="ri-checkbox-circle-fill"></i>
+                            <div>
+                                <strong>Tela Full Screen de 144Hz</strong>
+                                <span>Display AMOLED sem interrupções com taxa de atualização altíssima para fluidez impecável em jogos.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="ri-checkbox-circle-fill"></i>
+                            <div>
+                                <strong>Gatilhos Capacitivos 520Hz</strong>
+                                <span>Resposta ultra-rápida que dá vantagem competitiva real em jogos FPS e MOBAs.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="ri-checkbox-circle-fill"></i>
+                            <div>
+                                <strong>Carga Rápida de 80W</strong>
+                                <span>Recarregamento veloz que minimiza o tempo longe dos jogos.</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Contras -->
+                <div class="review-column cons">
+                    <h3>
+                        <i class="ri-thumb-down-fill"></i>
+                        Pontos Negativos
+                    </h3>
+                    <ul class="review-list">
+                        <li>
+                            <i class="ri-close-circle-fill"></i>
+                            <div>
+                                <strong>Preço Elevado</strong>
+                                <span>Como flagship gaming, o investimento é significativo, não sendo acessível para todos os bolsos.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="ri-close-circle-fill"></i>
+                            <div>
+                                <strong>Design Gamer Ousado</strong>
+                                <span>A estética gamer pode não agradar quem busca um visual mais discreto e corporativo.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="ri-close-circle-fill"></i>
+                            <div>
+                                <strong>Peso e Tamanho Consideráveis</strong>
+                                <span>Com bateria grande e sistema de resfriamento, o aparelho é mais pesado que smartphones convencionais.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="ri-close-circle-fill"></i>
+                            <div>
+                                <strong>Câmeras Boas, Mas Não Excepcionais</strong>
+                                <span>Embora competentes, as câmeras não rivalizam com flagships focados em fotografia como iPhone ou Galaxy S.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="ri-close-circle-fill"></i>
+                            <div>
+                                <strong>Sem Certificação de Resistência à Água</strong>
+                                <span>Ausência de IP68 pode ser preocupante para uso em ambientes úmidos ou próximo à água.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="ri-close-circle-fill"></i>
+                            <div>
+                                <strong>Nicho Específico</strong>
+                                <span>É um aparelho especializado para gamers, não sendo a melhor escolha para uso corporativo ou fotografia profissional.</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- CTA Section -->
     <section class="cta-section">
         <div class="cta-content">
             <h2>Domine Seus Jogos</h2>
-            <p>Adquira o smartphone gamer mais poderoso do mercado</p>
-            <div class="price-tag">Confira na Shopee</div>
+            <p>Confira as melhores ofertas do smartphone gamer mais poderoso do mercado</p>
+            <div class="price-tag">Disponível na Shopee</div>
             <a href="https://s.shopee.com.br/8zwxu0dS0c" target="_blank" class="btn-primary" style="background: var(--black); font-size: 1.3rem; padding: 1.5rem 4rem;">
-                <i class="ri-shopping-bag-3-line"></i>
-                Comprar RedMagic 10S Pro
+                <i class="ri-price-tag-3-line"></i>
+                Ver Preço na Shopee
             </a>
+            <p style="font-size: 12px; color: var(--light-gray); opacity: 0.8; margin-top: 10px;">*Como afiliado Shopee, posso receber uma comissão por compras qualificadas.*</p>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
         <div class="footer-content">
-            <div class="footer-section">
-                <h3>RedMagic</h3>
-                <p style="color: var(--light-gray); line-height: 1.8;">
-                    Líder em smartphones gaming com tecnologia de ponta e inovação constante para gamers profissionais.
-                </p>
+            <!-- Links Essenciais (apenas os obrigatórios) -->
+            <div class="footer-links">
+                <a href="https://silven.site/privacy-policy-2/">Política de Privacidade</a>
+                <a href="https://silven.site/disclamer/">Aviso Legal</a>
             </div>
-            <div class="footer-section">
-                <h3>Links Rápidos</h3>
-                <ul class="footer-links">
-                    <li><a href="#features">Recursos</a></li>
-                    <li><a href="#specs">Especificações</a></li>
-                    <li><a href="https://s.shopee.com.br/8zwxu0dS0c" target="_blank">Comprar</a></li>
-                    <li><a href="#">Suporte</a></li>
-                </ul>
+
+            <!-- Divulgação de Afiliado -->
+            <div class="footer-disclosure">
+                <h4>📢 Divulgação de Afiliado</h4>
+                <p>Este site contém links de afiliados. Como parceiro da Shopee, recebemos uma comissão por compras qualificadas realizadas através dos links deste site. Isso não afeta o preço que você paga e nos ajuda a manter o conteúdo gratuito e de qualidade.</p>
+                <p style="margin-top: 15px;">Nossa análise e opiniões são independentes e baseadas em pesquisa própria. Recomendamos apenas produtos que acreditamos serem relevantes para nossos leitores.</p>
             </div>
-            <div class="footer-section">
-                <h3>Produtos</h3>
-                <ul class="footer-links">
-                    <li><a href="#">RedMagic 10S Pro</a></li>
-                    <li><a href="#">Gaming Tablets</a></li>
-                    <li><a href="#">Acessórios</a></li>
-                    <li><a href="#">Coolers</a></li>
-                </ul>
+
+            <!-- Informações da Empresa -->
+            <div class="footer-company">
+                <h4>Informações Legais</h4>
+                <p class="cnpj">CNPJ: 55.116.954/0001-56</p>
+                <p>Razão Social: 55.116.954 SANDRA ROSA DA SILVA</p>
+                <p>Endereço: R. Julio Cesar Acosta Gimenes, 997 - Vila Nossa Senhora de Fátima</p>
+                <p>Ourinhos/SP - CEP 19.904-150</p>
+                <p>Data de Abertura: 14/05/2024</p>
             </div>
-            <div class="footer-section">
-                <h3>Redes Sociais</h3>
-                <div class="social-links">
-                    <a href="https://www.instagram.com/redmagicbrasil/" target="_blank">
-                        <i class="ri-instagram-fill"></i>
-                    </a>
-                    <a href="https://www.facebook.com/redmagicgaming" target="_blank">
-                        <i class="ri-facebook-fill"></i>
-                    </a>
-                    <a href="https://twitter.com/redmagicgaming" target="_blank">
-                        <i class="ri-twitter-x-fill"></i>
-                    </a>
-                    <a href="https://www.youtube.com/@redmagicgaming" target="_blank">
-                        <i class="ri-youtube-fill"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="copyright">
-            <p>&copy; 2025 RedMagic 10S Pro Landing Page. Todos os direitos reservados.</p>
         </div>
     </footer>
-
-    <!-- Floating Buy Button -->
-    <div class="floating-buy">
-        <a href="https://s.shopee.com.br/8zwxu0dS0c" target="_blank" class="btn-primary">
-            <i class="ri-shopping-cart-2-fill"></i>
-            Comprar
-        </a>
-    </div>
 
     <script>
         // Smooth scroll
@@ -754,22 +944,6 @@
                     });
                 }
             });
-        });
-
-        // Hide/show floating button based on scroll
-        let lastScroll = 0;
-        const floatingBtn = document.querySelector('.floating-buy');
-        
-        window.addEventListener('scroll', () => {
-            const currentScroll = window.pageYOffset;
-            
-            if (currentScroll > 500) {
-                floatingBtn.style.display = 'block';
-            } else {
-                floatingBtn.style.display = 'none';
-            }
-            
-            lastScroll = currentScroll;
         });
     </script>
 </body>
